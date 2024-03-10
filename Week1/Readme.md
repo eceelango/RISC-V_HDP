@@ -4,15 +4,16 @@
     2. It allows developers to explore how high-level code translates into low-level assembly instructions.
     3. Useful for understanding compiler behavior, optimizing code, and comparing compiler output.
 
-## Common RISC-V assembly instructions:
-## Load and Store Instructions:
-## Arithmetic Instructions:
-## Logical Instructions:
-## Control Flow Instructions:
-## Data Transfer Instructions:
-## Control Instructions:
-## Assembly Code Analysis
-## Arithmetic Operations
+##  RISC-V assembly instructions:
++ Common RISC-V assembly instructions:
++ Load and Store Instructions:
++ Arithmetic Instructions:
++ Logical Instructions:
++ Control Flow Instructions:
++ Data Transfer Instructions:
++ Control Instructions:
++ Assembly Code Analysis
++ Arithmetic Operations
     1. Analyzed assembly output for addition, subtraction, multiplication, and division operations.
     2. Examined compiler optimizations and machine code efficiency.
     
