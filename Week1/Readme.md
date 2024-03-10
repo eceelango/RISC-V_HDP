@@ -4,78 +4,13 @@
     2. It allows developers to explore how high-level code translates into low-level assembly instructions.
     3. Useful for understanding compiler behavior, optimizing code, and comparing compiler output.
 
-## common RISC-V assembly instructions:
-
+## Common RISC-V assembly instructions:
 ## Load and Store Instructions:
-
-    lw: Load word from memory.
-    
-    sw: Store word to memory.
-    
-    lb: Load byte from memory.
-    
-    sb: Store byte to memory.
-    
-    lh: Load halfword from memory.
-    
-    sh: Store halfword to memory.
-
 ## Arithmetic Instructions:
-
-    add: Add two registers.
-    
-    sub: Subtract one register from another.
-    
-    mul: Multiply two registers.
-    
-    div: Divide one register by another.
-    
-    rem: Calculate the remainder of division.
-
 ## Logical Instructions:
-
-    and: Bitwise AND operation.
-    
-    or: Bitwise OR operation.
-    
-    xor: Bitwise XOR operation.
-    
-    sll: Shift left logical.
-    
-    srl: Shift right logical.
-    
-    slt: Set if less than.
-
 ## Control Flow Instructions:
-
-    beq: Branch if equal.
-    
-    bne: Branch if not equal.
-    
-    jal: Jump and link.
-    
-    jr: Jump register.
-    
-    jalr: Jump and link register.
-
 ## Data Transfer Instructions:
-
-    mv: Move data between registers.
-    
-    li: Load immediate value into a register.
-    
-    la: Load address of a label into a register.
-
 ## Control Instructions:
-
-    nop: No operation.
-    
-    fence: Memory fence instruction.
-    
-    ecall: Environment call instruction.
-    
-    ebreak: Environment breakpoint.
-
 ## Assembly Code Analysis
 ## Arithmetic Operations
     1. Analyzed assembly output for addition, subtraction, multiplication, and division operations.
