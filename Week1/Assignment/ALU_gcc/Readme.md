@@ -51,7 +51,6 @@ int main() {
 Compile the C code using the gcc compiler.
 Run the compiled executable to verify the functionality of the 4-bit ALU.
 
-![4bitalu](https://github.com/LRAJA33/RISCV-HDP/assets/105126037/62ed60fc-e236-427f-b556-8fb70b2798db)
 
 ![4bitalu_res](https://github.com/LRAJA33/RISCV-HDP/assets/105126037/e96b8a7f-f305-4c07-9306-ab2b25ffdc38)
 
