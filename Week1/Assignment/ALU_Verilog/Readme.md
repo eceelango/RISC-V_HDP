@@ -63,6 +63,4 @@ Compile the Verilog code using iverilog.
 Simulate the compiled Verilog code using vvp.
 Use gtkwave to visualize the simulation waveform and verify the functionality of the Verilog ALU.
 
-![ver_alu](https://github.com/LRAJA33/RISCV-HDP/assets/105126037/66054a2e-01e1-4cb0-86c8-58f3325fd08f)
-
 ![ver_alu_gtkwave](https://github.com/LRAJA33/RISCV-HDP/assets/105126037/b14ec1aa-fadf-4c84-ba3c-d5f83e41858e)
