@@ -16,3 +16,13 @@ Clock Period/Clock frequency and Number of cycles decides the CPU performance
 ## CPU time
 ![CPU time](https://github.com/eceelango/RISC-V_HDP/assets/65966247/19c0f57f-9cb6-48bf-b376-88a014bd63f1)
 ![CPU time2](https://github.com/eceelango/RISC-V_HDP/assets/65966247/59526793-ee42-4ba3-a925-6a0e17f835c6)
+## CPU Clock Cycles
+![Number of CPU clock cycles](https://github.com/eceelango/RISC-V_HDP/assets/65966247/3a52d87c-e57f-4609-a110-86cd24ec9b3f)
+## CPU Comparison
+![Number of CPU clock cycles](https://github.com/eceelango/RISC-V_HDP/assets/65966247/b90acfef-b6c0-4973-a7d8-874128e95f2b)
+## Swap Operation for Performance Comparison
+![Swap consolidated](https://github.com/eceelango/RISC-V_HDP/assets/65966247/3aee5264-33ef-4836-a32c-c48e26c54c57)
+## CPI - Clock Cycles per Instructions
+![CPI](https://github.com/eceelango/RISC-V_HDP/assets/65966247/1bfe630f-9f0a-4025-99c9-0a71d8001b95)
+## CPU Time with CPI - Clock Cycles per Instructions
+![CPU time  with CPI](https://github.com/eceelango/RISC-V_HDP/assets/65966247/f692aae1-5f5c-47b8-861f-21dece15396f)
