@@ -3,7 +3,9 @@
 ![Template](https://github.com/eceelango/RISC-V_HDP/assets/65966247/d5a3f70c-07e0-4541-9870-0043d773bf44)
 ## Architecture Type Selection
 ![Architecture Type](https://github.com/eceelango/RISC-V_HDP/assets/65966247/be58b678-f715-4022-8d91-84d461484473)
-**+ After Selcting the Architecture**
+
+**+ After Selecting the Architecture**
+
   PC and IF will be enabled for the selected architecture
   ![After Architecture Type](https://github.com/eceelango/RISC-V_HDP/assets/65966247/776e5e0a-02a1-486c-9d90-d0e13ed691be)
 ## Instruction Selection
