@@ -14,3 +14,6 @@ Among 47 instructions select the instructions which ever we want for our applica
 ![Instruction Selection](https://github.com/eceelango/RISC-V_HDP/assets/65966247/d49c5901-d99e-4ffd-b35f-ced3da397407)
 
 **+ After Selecting the Instruction**
+  Decode Stage and Execution Stage will be enabled for the selected architecture
+ ![After Instruction Selection](https://github.com/eceelango/RISC-V_HDP/assets/65966247/e3a060bd-647d-427e-bc57-db775e62eea3)
+
