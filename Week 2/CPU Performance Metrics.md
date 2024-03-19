@@ -29,4 +29,7 @@ Clock Period/Clock frequency and Number of cycles decides the CPU performance
 ## CPU Performance Example:
 CPU 2 is 1.2 times faster than that of CPU 1
 ![CPU Performance1](https://github.com/eceelango/RISC-V_HDP/assets/65966247/89c6bc1c-54ea-4135-b2bf-39206b421b1e)
+## Code Sequence Speed Comparison:
+Code Sequence 2 is faster than the code sequence 1
+![Code Sequence](https://github.com/eceelango/RISC-V_HDP/assets/65966247/5fbf4f88-00c4-4a06-be75-aefc9f18b3aa)
 
