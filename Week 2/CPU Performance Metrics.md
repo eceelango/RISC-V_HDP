@@ -26,3 +26,7 @@ Clock Period/Clock frequency and Number of cycles decides the CPU performance
 ![CPI](https://github.com/eceelango/RISC-V_HDP/assets/65966247/1bfe630f-9f0a-4025-99c9-0a71d8001b95)
 ## CPU Time with CPI - Clock Cycles per Instructions
 ![CPU time  with CPI](https://github.com/eceelango/RISC-V_HDP/assets/65966247/f692aae1-5f5c-47b8-861f-21dece15396f)
+## CPU Performance Example:
+CPU 2 is 1.2 times faster than that of CPU 1
+![CPU Performance1](https://github.com/eceelango/RISC-V_HDP/assets/65966247/89c6bc1c-54ea-4135-b2bf-39206b421b1e)
+
