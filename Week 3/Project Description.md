@@ -1,6 +1,8 @@
 # Weather Station Clock
 
-**Objective: ** Combine a digital clock with temperature and humidity readings, displaying all information on a single screen or separate modules
+## Objective:
+
+Combine a digital clock with temperature and humidity readings, displaying all information on a single screen or separate modules
 
 ## Key Components:
 
