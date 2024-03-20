@@ -159,8 +159,8 @@ printf("Result is: %d", result); // Printing the result
 return 0;
 
 }
+```
 
-    ```
 ## Assignment 2
 + Measure CPU performance of all the programs mentioned above using either godbolt or RISC-V disassembler.
 
