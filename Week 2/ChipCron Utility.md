@@ -47,7 +47,20 @@ MEM and WB block is enabled for the selected architecture
 
 ![After Pipeline Connection](https://github.com/eceelango/RISC-V_HDP/assets/65966247/1fca6672-9421-4102-9b9d-a7cf2d27002d)
 
++ Script based methodologies
++ Configuration file for Microarchitecture is dumped from RISCV compiler as a architecture specification
 
+## ChipCron Optimization
 
+**+ Design Configuration**
+![Design Configuration](https://github.com/eceelango/RISC-V_HDP/assets/65966247/0027195c-b784-4c8e-83aa-b47243a8fd20)
 
+## ChipCron file Dumping Procedure
+![Chipcron Flow](https://github.com/eceelango/RISC-V_HDP/assets/65966247/3e57390e-c6b6-4db4-9e29-96d7b36cf8c9)
+
+Instruction (JSON) Files and Assembly file(.txt) need to be give as a input to ChipCron tool , it will generate a ZIP file. The file consists of Synthesizable RTL with testbench. We can perform RTL simulation using Verilog and testbench file.
  
+![RTL Code](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6f8fa92d-62de-4952-8f4b-8b0516ab59d8)
+
+
+
