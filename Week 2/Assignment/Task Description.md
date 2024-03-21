@@ -179,6 +179,12 @@ return 0;
 ## Assignment 2
 + Measure CPU performance of all the programs mentioned above using either godbolt or RISC-V disassembler.
 
+  ### Command
+  ```
+  riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o ./Counter.o Counter.c
+  riscv64-unknown-elf-objdump -d -r Counter.o > Counter_assembly.txt
+  ```
+
 Let us assume the number of clock cycles for the RISC-V instructions.
 
 Instructions associated with add : 2 cycles.
