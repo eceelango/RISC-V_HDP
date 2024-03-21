@@ -3,6 +3,9 @@
 + Measure CPU performance of all the programs mentioned above using either godbolt or RISC-V disassembler.
 ## Assignment 1
 + Verify all the c code (counter, matrix multiplication, ALU code using RISC-V compiler and spike output.
+  ### Commands
+>  riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o ./Counter.o Counter.c
+> spike pk Counter.o
 ## Code for Counter.C
 ```
 #include <stdio.h>
@@ -33,6 +36,9 @@ int main()
 	}
 }
 ```
+### Spike Simulation
+![Spike Simulation Counter](https://github.com/eceelango/RISC-V_HDP/assets/65966247/1e997a6e-569e-453b-b0b3-f04ef53ef557)
+
 ## Code for Matrix Multiplication.C
 ```
 // C program to multiply two matrices
