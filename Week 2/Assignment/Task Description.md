@@ -172,6 +172,9 @@ return 0;
 
 }
 ```
+### Spike Simulation
+![Spike Output Alu](https://github.com/eceelango/RISC-V_HDP/assets/65966247/598f3e02-8e36-499c-89e4-5a38d83b3c8c)
+
 
 ## Assignment 2
 + Measure CPU performance of all the programs mentioned above using either godbolt or RISC-V disassembler.
