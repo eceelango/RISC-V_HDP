@@ -1,4 +1,4 @@
-![MAZEFLOW](https://github.com/eceelango/RISC-V_HDP/assets/65966247/e8c2f263-6201-4960-9d8b-f3de35805a9c)# Microbot Maze Solver: Autonomous Navigation Controller Development
+# Microbot Maze Solver: Autonomous Navigation Controller Development
 
 **Autonomous robot able to find its way through a maze in the shortest possible time**
 
