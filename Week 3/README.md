@@ -18,16 +18,19 @@
 + Sensors - 3 No's
 + Motor Drivers - 2
 + N20 Motors - 2
-+ Robotic Chasis with Wheel 
++ Robotic Chasis with Wheel
+  
+![BOT](https://github.com/eceelango/RISC-V_HDP/assets/65966247/37287564-b0ea-42df-a390-8b2c4b1478bd)
 
 ## Key Functions:
 
-1. Three VL53L0X TOF Sensors gather distance data for maze perception.
+1. Three Sensors gather distance data for maze perception from Front, Left and Right Side.
 2. Wall Following algorithm maps the maze efficiently for optimized paths.
 3. RISC V microcontroller makes real-time movement decisions.
-4. DVR8835 Motor Driver controls N20 Motors for accurate navigation.
+4. Motor Driver controls N20 Motors for accurate navigation.
 
 ## Block Diagram:
+![Block Diagram](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6cd1881e-0a56-45c0-b909-3ddc6f1ed812)
 
 ## Flowchart
 
