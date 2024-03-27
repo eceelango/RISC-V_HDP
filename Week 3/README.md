@@ -1,4 +1,4 @@
-# Microbot Maze Solver: Autonomous Navigation Controller Development
+![MAZEFLOW](https://github.com/eceelango/RISC-V_HDP/assets/65966247/e8c2f263-6201-4960-9d8b-f3de35805a9c)# Microbot Maze Solver: Autonomous Navigation Controller Development
 
 **Autonomous robot able to find its way through a maze in the shortest possible time**
 
@@ -33,6 +33,7 @@
 ![Block Diagram](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6cd1881e-0a56-45c0-b909-3ddc6f1ed812)
 
 ## Flowchart
+![MAZEFLOW](https://github.com/eceelango/RISC-V_HDP/assets/65966247/c6b75dd4-eeee-48d0-bb62-448453a44ced)
 
 ## Register architecture of x30 for GPIOs
 
