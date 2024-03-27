@@ -41,3 +41,78 @@
 ## Motor Driver Functions & Pinout
 
 ## N20 Motors
+
+## C Code
+
+```
+#include <stdbool.h>
+#include <stdio.h>  
+
+// Assuming Sensor1 = Front, Sensor2 = Right, Sensor3 = Left
+bool Sensor1 = false;
+bool Sensor2 = false;
+bool Sensor3 = false;
+
+// Prototype function declarations
+void moveForward();
+void turnRight();
+void turnLeft();
+void stop();
+
+// Function to simulate or read sensor values
+// You need to replace these functions with actual sensor read code
+void readSensors() {
+    // Placeholder functions to simulate sensor readings
+    // Sensor1 = readFrontSensor();
+    // Sensor2 = readRightSensor();
+    // Sensor3 = readLeftSensor();
+
+    // For the purpose of this example, let's manually assign values
+    // Assume false means no obstacle, true means obstacle
+    Sensor1 = false; // No obstacle in front
+    Sensor2 = false; // No obstacle to the right
+    Sensor3 = true;  // Obstacle to the left
+}
+
+int main() {
+    while (true) { // Infinite loop to keep the robot running
+        readSensors(); // Update sensor readings
+
+        if (!Sensor2) { // If the path is clear on the right (no obstacle)
+            turnRight();
+            moveForward();
+        } else if (!Sensor1) { // If the right is blocked but forward is clear (no obstacle)
+            moveForward();
+        } else if (!Sensor3) { // If both right and forward paths are blocked, turn left (no obstacle)
+            turnLeft();
+            moveForward();
+        } else {
+            // If all paths are blocked, stop
+            stop();
+            break; // Exiting the loop, can be removed to keep the robot in a waiting state
+        }
+    }
+    return 0;
+}
+
+void moveForward() {
+    printf("Moving forward\n");
+    // Code to move the robot forward
+}
+
+void turnRight() {
+    printf("Turning right\n");
+    // Code to turn the robot right
+}
+
+void turnLeft() {
+    printf("Turning left\n");
+    // Code to turn the robot left
+}
+
+void stop() {
+    printf("Stopping\n");
+    // Code to stop the robot
+}
+
+```
