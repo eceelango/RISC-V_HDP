@@ -67,7 +67,6 @@ void readSensors() {
     // Sensor2 = readRightSensor();
     // Sensor3 = readLeftSensor();
 
-    // For the purpose of this example, let's manually assign values
     // Assume false means no obstacle, true means obstacle
     Sensor1 = false; // No obstacle in front
     Sensor2 = false; // No obstacle to the right
@@ -97,22 +96,22 @@ int main() {
 
 void moveForward() {
     printf("Moving forward\n");
-    // Code to move the robot forward
+   
 }
 
 void turnRight() {
     printf("Turning right\n");
-    // Code to turn the robot right
+  
 }
 
 void turnLeft() {
     printf("Turning left\n");
-    // Code to turn the robot left
+   
 }
 
 void stop() {
     printf("Stopping\n");
-    // Code to stop the robot
+ 
 }
 
 ```
