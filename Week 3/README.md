@@ -1,4 +1,5 @@
 # Microbot Maze Solver: Autonomous Navigation Controller Development
+
 **Autonomous robot able to find its way through a maze in the shortest possible time**
 
 ![IMG_4124](https://github.com/eceelango/RISC-V_HDP/assets/65966247/357e906f-3e07-4aae-b149-dbfe8a4d6116)
@@ -24,3 +25,14 @@
 3. RISC V microcontroller makes real-time movement decisions.
 4. DVR8835 Motor Driver controls N20 Motors for accurate navigation.
 
+## Block Diagram:
+
+## Flowchart
+
+## Register architecture of x30 for GPIOs
+
+## Sensor Functions & Pinout
+
+## Motor Driver Functions & Pinout
+
+## N20 Motors
