@@ -38,13 +38,33 @@
 ## Register architecture of x30 for GPIOs
 
 ## Sensor Functions & Pinout
+Three Sensor Options to implement the project
++ IR Sensor
++ Ultrasonic Sensor
++ TOF Sensor
+### IR Sensor
+
+When the module detects obstacles in front of the signal, the circuit board green indicator light level, while the OUT port continuous output low-level signals, the module detects a distance of 2 ~ 10cm, detection angle 35 °, the detection distance can be potential adjustment with adjustment potentiometer clockwise, the increase in detection distance; counterclockwise adjustment potentiometer, the detection distance decreased.
+
+![ir-sensor-module-india-800x800](https://github.com/eceelango/RISC-V_HDP/assets/65966247/3961fc7b-e74c-4db9-87d0-b59613a53b3f)
+
+**Pinout:**
++ VCC external 3.3V-5V voltage (can be directly connected with the a 5v microcontroller and 3.3v microcontroller).
++ GND external GND.
++ OUT board digital output interface (0 and 1).
+### Ultrasonic Sensor
+
+### TOF Sensor
+![TOF](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6ac70ba8-4502-43d5-8b79-a051fc229e2b)
+
+![Sensor Pinout](https://github.com/eceelango/RISC-V_HDP/assets/65966247/d3d00ef3-03d2-47bb-a745-58cad553e0f1)
 
 ## Motor Driver Functions & Pinout
 + DRV8835 Dual Low-Voltage H-Bridge Driver
 + Separate Motor and Logic-Supply Pins
 + 0-V to 11-V Motor-Operating Supply-Voltage
 + 2-V to 7-V Logic Supply-Voltage
-  
+  ![Driver  png](https://github.com/eceelango/RISC-V_HDP/assets/65966247/eba6a543-e10d-4ab4-a493-95c4c9fca34a)
 
 **Datasheet:** https://robu.in/wp-content/uploads/2023/05/drv8835.pdf
 ## N20 Motors
