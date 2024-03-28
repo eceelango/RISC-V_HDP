@@ -91,13 +91,12 @@ When the module detects obstacles in front of the signal, the circuit board gree
 ## C Code
 
 ```
-#include <stdbool.h>
-#include <stdio.h>  
+#include <stdio.h>
 
-// Assuming Sensor1 = Front, Sensor2 = Right, Sensor3 = Left
-bool Sensor1 = false;
-bool Sensor2 = false;
-bool Sensor3 = false;
+// Using int instead of bool. 0 = false, 1 = true
+int Sensor1 = 0;
+int Sensor2 = 0;
+int Sensor3 = 0;
 
 // Prototype function declarations
 void moveForward();
@@ -106,22 +105,26 @@ void turnLeft();
 void stop();
 
 // Function to simulate or read sensor values
-// You need to replace these functions with actual sensor read code
 void readSensors() {
-    // Placeholder functions to simulate sensor readings
-    // Sensor1 = readFrontSensor();
-    // Sensor2 = readRightSensor();
-    // Sensor3 = readLeftSensor();
+    // This is where you'd update the sensor variables based on real sensor input.
+    // For now, this function will simulate certain scenarios. You might replace
+    // these with scanf statements to manually test different cases.
+    
+    // Example scenario: No obstacle in front, no obstacle to the right, obstacle to the left
+    // Uncomment the lines below to manually input sensor values via console
 
-    // Assume false means no obstacle, true means obstacle
-    Sensor1 = false; // No obstacle in front
-    Sensor2 = false; // No obstacle to the right
-    Sensor3 = true;  // Obstacle to the left
+    printf("Enter state for Sensor1 (Front) [0 for no obstacle, 1 for obstacle]: ");
+    scanf("%d", &Sensor1);
+    printf("Enter state for Sensor2 (Right) [0 for no obstacle, 1 for obstacle]: ");
+    scanf("%d", &Sensor2);
+    printf("Enter state for Sensor3 (Left) [0 for no obstacle, 1 for obstacle]: ");
+    scanf("%d", &Sensor3);
+
 }
 
 int main() {
-    while (true) { // Infinite loop to keep the robot running
-        readSensors(); // Update sensor readings
+    while (1) { // Infinite loop to keep the robot running
+        readSensors(Sensor1, Sensor2, Sensor3); // Update sensor readings
 
         if (!Sensor2) { // If the path is clear on the right (no obstacle)
             turnRight();
@@ -142,22 +145,18 @@ int main() {
 
 void moveForward() {
     printf("Moving forward\n");
-   
 }
 
 void turnRight() {
     printf("Turning right\n");
-  
 }
 
 void turnLeft() {
     printf("Turning left\n");
-   
 }
 
 void stop() {
     printf("Stopping\n");
- 
 }
 
 ```
