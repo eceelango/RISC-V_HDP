@@ -53,7 +53,15 @@ When the module detects obstacles in front of the signal, the circuit board gree
 + GND external GND.
 + OUT board digital output interface (0 and 1).
 ### Ultrasonic Sensor
-
+![HCSR04-Ultrasonic-Sensor-Pinout](https://github.com/eceelango/RISC-V_HDP/assets/65966247/c924c5c7-b36c-4b72-999d-8943b4558204)
++ Operating voltage: +5V
++ Theoretical  Measuring Distance: 2cm to 450cm
++ Practical Measuring Distance: 2cm to 80cm
++ Accuracy: 3mm
++ Measuring angle covered: <15°
++ Operating Current: <15mA
++ Operating Frequency: 40Hz
+  
 ### TOF Sensor
 ![TOF](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6ac70ba8-4502-43d5-8b79-a051fc229e2b)
 
