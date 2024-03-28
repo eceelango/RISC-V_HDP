@@ -40,8 +40,17 @@
 ## Sensor Functions & Pinout
 
 ## Motor Driver Functions & Pinout
++ DRV8835 Dual Low-Voltage H-Bridge Driver
++ Separate Motor and Logic-Supply Pins
++ 0-V to 11-V Motor-Operating Supply-Voltage
++ 2-V to 7-V Logic Supply-Voltage
+  
 
+**Datasheet:** https://robu.in/wp-content/uploads/2023/05/drv8835.pdf
 ## N20 Motors
++ N20-12V-300 Rpm Micro Metal Gear Motor
++ Lightweight, high torque and low RPM.
+  ![mOTOR](https://github.com/eceelango/RISC-V_HDP/assets/65966247/809b388b-60a0-4fa6-938f-587c86a71620)
 
 ## C Code
 
