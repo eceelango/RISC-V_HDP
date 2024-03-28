@@ -63,9 +63,17 @@ When the module detects obstacles in front of the signal, the circuit board gree
 + Operating Frequency: 40Hz
   
 ### TOF Sensor
-![TOF](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6ac70ba8-4502-43d5-8b79-a051fc229e2b)
 
+![TOF](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6ac70ba8-4502-43d5-8b79-a051fc229e2b)
 ![Sensor Pinout](https://github.com/eceelango/RISC-V_HDP/assets/65966247/d3d00ef3-03d2-47bb-a745-58cad553e0f1)
+
++ The VL53L0X is a new generation Time-of-Flight (ToF) laser-ranging module housed in the smallest package on the market today
++ It can measure absolute distances up to 2m, setting a new benchmark in ranging performance levels, opening the door to various new applications.
++ This module has 4 pins VCC, GND, SCL, and SDA.
++ The board has a 2.8V linear regulator and integrated level shifter so, it can bear a voltage in the range of 2.6V to 5.5V.
++  It uses I2C protocol to communicate that’s why Serial Clock Line (SCL) and Serial Data Address (SDA) pins are there to communicate with the microcontroller.
++ Supply Current: 10mA
+
 
 ## Motor Driver Functions & Pinout
 + DRV8835 Dual Low-Voltage H-Bridge Driver
