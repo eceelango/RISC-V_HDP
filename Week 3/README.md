@@ -35,8 +35,6 @@
 ## Flowchart
 ![MAZEFLOW](https://github.com/eceelango/RISC-V_HDP/assets/65966247/c6b75dd4-eeee-48d0-bb62-448453a44ced)
 
-## Register architecture of x30 for GPIOs
-
 ## Sensor Functions & Pinout
 Three Sensor Options to implement the project
 + IR Sensor
@@ -207,4 +205,9 @@ spike pk maze.o
 ![Screenshot from 2024-03-31 14-57-47](https://github.com/eceelango/RISC-V_HDP/assets/65966247/4b8ce8b1-2b02-4e3f-9332-dd3a7592d641)
 
 
+## Register architecture of x30 for GPIOs
 
++ Input Signals -
++ Output Signals -
++ Number of Registers Required
++ Register Allocation
