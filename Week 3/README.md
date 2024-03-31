@@ -193,3 +193,8 @@ void delay(long iterations) {
 }
 
 ```
+## Output
+![Screenshot from 2024-03-31 14-47-44](https://github.com/eceelango/RISC-V_HDP/assets/65966247/afe3c44f-229c-416a-8ddd-d7008c5fa456)
+
+
+
