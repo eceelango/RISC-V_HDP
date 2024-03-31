@@ -207,7 +207,9 @@ spike pk maze.o
 
 ## Register architecture of x30 for GPIOs
 
-+ Input Signals -
-+ Output Signals -
-+ Number of Registers Required
+
++ Input Signals - Sensor1, Sensor2, Sensor3;
++ Output Signals - Speed1, Speed2, e1, e2, d1 ,d2 ;
++ Number of Registers Required - 7
 + Register Allocation
+  
