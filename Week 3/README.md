@@ -37,7 +37,7 @@
 
 ## Sensor Functions & Pinout
 Three Sensor Options to implement the project
-+ IR Sensor
++ IR Sensor (This Project used IR option)
 + Ultrasonic Sensor
 + TOF Sensor
 ### IR Sensor
