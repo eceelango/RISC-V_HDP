@@ -199,9 +199,12 @@ void delay(long iterations) {
 ![Screenshot from 2024-03-31 14-47-44](https://github.com/eceelango/RISC-V_HDP/assets/65966247/afe3c44f-229c-416a-8ddd-d7008c5fa456)
 
 **+ RISCV Compiler**
+```
 riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o ./maze.o maze.c
 spike pk maze.o
 
+```
+![Screenshot from 2024-03-31 14-57-47](https://github.com/eceelango/RISC-V_HDP/assets/65966247/4b8ce8b1-2b02-4e3f-9332-dd3a7592d641)
 
 
 
