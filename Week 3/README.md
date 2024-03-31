@@ -97,34 +97,34 @@ When the module detects obstacles in front of the signal, the circuit board gree
 int Sensor1 = 0;
 int Sensor2 = 0;
 int Sensor3 = 0;
+int Speed1 = 1;
+int Speed2 = 1;
+int e1=0;
+int e2=0;
+int d1=0;
+int d2=0;
 
 // Prototype function declarations
 void moveForward();
 void turnRight();
 void turnLeft();
+void goBack();
 void stop();
+void delay(long iterations);
 
 // Function to simulate or read sensor values
 void readSensors() {
-    // This is where you'd update the sensor variables based on real sensor input.
-    // For now, this function will simulate certain scenarios. You might replace
-    // these with scanf statements to manually test different cases.
-    
-    // Example scenario: No obstacle in front, no obstacle to the right, obstacle to the left
-    // Uncomment the lines below to manually input sensor values via console
-
     printf("Enter state for Sensor1 (Front) [0 for no obstacle, 1 for obstacle]: ");
     scanf("%d", &Sensor1);
     printf("Enter state for Sensor2 (Right) [0 for no obstacle, 1 for obstacle]: ");
     scanf("%d", &Sensor2);
     printf("Enter state for Sensor3 (Left) [0 for no obstacle, 1 for obstacle]: ");
     scanf("%d", &Sensor3);
-
 }
 
 int main() {
     while (1) { // Infinite loop to keep the robot running
-        readSensors(Sensor1, Sensor2, Sensor3); // Update sensor readings
+        readSensors(); // Update sensor readings
 
         if (!Sensor2) { // If the path is clear on the right (no obstacle)
             turnRight();
@@ -145,18 +145,51 @@ int main() {
 
 void moveForward() {
     printf("Moving forward\n");
+    e1= 1;
+    e2=0;
+    d1= 0;
+    d2=1;
 }
 
 void turnRight() {
     printf("Turning right\n");
+    e1= 1;
+    e2=0;
+    d1= 1;
+    d2=0;
+    delay(700);
 }
 
 void turnLeft() {
     printf("Turning left\n");
+    e1= 0;
+    e2=1;
+    d1= 0;
+    d2=1;
+    delay(700);
+}
+
+void goBack() {
+    printf("Returning\n");
+    e1= 1;
+    e2=0;
+    d1= 1;
+    d2=0;
+    delay(1400);
 }
 
 void stop() {
     printf("Stopping\n");
+    e1= 0;
+    e2=0;
+    d1= 0;
+    d2=0;
+}
+
+void delay(long iterations) {
+    for(long i = 0; i < iterations; i++) {
+        // Empty loop body
+    }
 }
 
 ```
