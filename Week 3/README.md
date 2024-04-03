@@ -210,12 +210,13 @@ spike pk maze.o
 
 + Input Signals - Sensor1, Sensor2, Sensor3;
 + Output Signals - Speed1, Speed2, e1, e2, d1 ,d2 ;
-+ Number of Registers Required - 9
-+ Register Allocation
++ Number of Register bits Required - 9
++ Register bits allocations are given below
 
-> x30 [2:0] is Sensor -  Sensor 1 - x30[0]; Sensor 2 - x30[1]; Sensor 3 - x30[2];
-> x30 [4:3] is speed - Speed 1 x30 [3]; Speed 2 x30 [4]; 
-> x30 [6:5] e1 and e2 - e1 x30 [5] ; e2 x30 [6] ; 
-> x30 [8:7] d1 and d2 -d1 x30 [7] ; d2 x30 [8] ;
++ x30 [2:0] is Sensor -  Sensor 1 - x30[0]; Sensor 2 - x30[1]; Sensor 3 - x30[2];
++ x30 [4:3] is speed - Speed 1 x30 [3]; Speed 2 x30 [4]; 
++ x30 [6:5] is e1 & e2 - e1 x30 [5] ; e2 x30 [6] ; 
++ x30 [8:7] is d1 & d2 - d1 x30 [7] ; d2 x30 [8] ;
+
 
 
