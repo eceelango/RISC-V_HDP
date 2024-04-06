@@ -2,7 +2,7 @@
 ```
 #include <stdio.h>
 
-// Using int instead of bool. 0 = false, 1 = true
+// Using int 0 = false, 1 = true
 int Sensor1 = 0;    // Left Sensor
 int Sensor2 = 0;    // Front Sensor
 int Sensor3 = 0;    // Right Sensor
