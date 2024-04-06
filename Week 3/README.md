@@ -33,7 +33,7 @@
 ![Block Diagram](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6cd1881e-0a56-45c0-b909-3ddc6f1ed812)
 
 ## Flowchart
-![MAZEFLOW (2)](https://github.com/eceelango/RISC-V_HDP/assets/65966247/f584f1fc-239e-4459-bccb-0762b27adaaa)
+![MAZEFLOW (2)](https://github.com/eceelango/RISC-V_HDP/assets/65966247/73bf8aca-0ae2-4462-9da7-e1154d7704dd)
 
 ## Sensor Functions & Pinout
 Three Sensor Options to implement the project
@@ -92,9 +92,9 @@ When the module detects obstacles in front of the signal, the circuit board gree
 #include <stdio.h>
 
 // Using int instead of bool. 0 = false, 1 = true
-int Sensor1 = 0;    // Front Sensor
-int Sensor2 = 0;    // Right Sensor
-int Sensor3 = 0;    // Left Sensor
+int Sensor1 = 0;    // Left Sensor
+int Sensor2 = 0;    // Front Sensor
+int Sensor3 = 0;    // Right Sensor
 int Motor1A=0;
 int Motor1B=0;
 int Motor2A=0;
@@ -110,23 +110,23 @@ void delay(long iterations);
 
 // Function to simulate or read sensor values
 void readSensors() {
-    printf("Enter state for Sensor2 (Right) [0 for no obstacle, 1 for obstacle]: ");
-    scanf("%d", &Sensor2);
-    printf("Enter state for Sensor1 (Front [0 for no obstacle, 1 for obstacle]: ");
-    scanf("%d", &Sensor1);
-    printf("Enter state for Sensor3 (Left) [0 for no obstacle, 1 for obstacle]: ");
+    printf("Enter state for Sensor3 (Right) [0 for no obstacle, 1 for obstacle]: ");
     scanf("%d", &Sensor3);
+    printf("Enter state for Sensor2 (Front [0 for no obstacle, 1 for obstacle]: ");
+    scanf("%d", &Sensor2);
+    printf("Enter state for Sensor1 (Left) [0 for no obstacle, 1 for obstacle]: ");
+    scanf("%d", &Sensor1);
 }
 
 int main() {
     while (1) { // keep the robot running infintely
         readSensors(); // Update sensor readings
-        if (!Sensor2) { // If the path is clear on the right (no obstacle)
+        if (!Sensor3) { // If the path is clear on the right (no obstacle)
             turnRight();
          
-        } else if (!Sensor1) { // If the right is blocked but forward is clear (no obstacle)
+        } else if (!Sensor2) { // If the right is blocked but forward is clear (no obstacle)
             moveForward();
-        } else if (!Sensor3) { // If both right and forward paths are blocked, turn left (no obstacle)
+        } else if (!Sensor1) { // If both right and forward paths are blocked, turn left (no obstacle)
             turnLeft();
               } else {
             // If all paths are blocked, Turn Back
@@ -146,16 +146,16 @@ void moveForward() {
 
 void turnRight() {
     printf("Turning right\n");
-   Motor1A= 1;
+     Motor1A= 1;
      Motor1B=0;
-    Motor2A= 1;
-    Motor2B=0;
-    delay(700);
+     Motor2A= 1;
+     Motor2B=0;
+     delay(700);
 }
 
 void turnLeft() {
     printf("Turning left\n");
-   Motor1A= 0;
+    Motor1A= 0;
     Motor1B=1;
     Motor2A= 0;
     Motor2B=1;
@@ -164,9 +164,9 @@ void turnLeft() {
 
 void goBack() {
     printf("U Turn\n");
-   Motor1A= 1;
+    Motor1A= 1;
     Motor1B=0;
-   Motor2A= 1;
+    Motor2A= 1;
     Motor2B=0;
     delay(1400);
 }
