@@ -72,7 +72,6 @@ When the module detects obstacles in front of the signal, the circuit board gree
 +  It uses I2C protocol to communicate that’s why Serial Clock Line (SCL) and Serial Data Address (SDA) pins are there to communicate with the microcontroller.
 + Supply Current: 10mA
 
-
 ## Motor Driver Functions & Pinout
 + DRV8835 Dual Low-Voltage H-Bridge Driver
 + Separate Motor and Logic-Supply Pins
@@ -172,7 +171,6 @@ void goBack() {
     delay(1400);
 }
 
-
 void delay(long iterations) {
     for(long i = 0; i < iterations; i++) {
         // Empty loop body
@@ -195,7 +193,6 @@ spike pk maze.o
 
 
 ## Register architecture of x30 for GPIOs
-
 
 + Input Signals - Sensor1, Sensor2, Sensor3;
 + Output Signals - Speed1, Speed2, e1, e2, d1 ,d2 ;
