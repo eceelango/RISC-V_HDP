@@ -33,7 +33,7 @@
 ![Block Diagram](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6cd1881e-0a56-45c0-b909-3ddc6f1ed812)
 
 ## Flowchart
-![MAZEFLOW (1)](https://github.com/eceelango/RISC-V_HDP/assets/65966247/43af1c54-7faa-43f4-a7e2-64cdb3f1a5e1)
+![MAZEFLOW (2)](https://github.com/eceelango/RISC-V_HDP/assets/65966247/f584f1fc-239e-4459-bccb-0762b27adaaa)
 
 ## Sensor Functions & Pinout
 Three Sensor Options to implement the project
@@ -87,20 +87,21 @@ When the module detects obstacles in front of the signal, the circuit board gree
   ![mOTOR](https://github.com/eceelango/RISC-V_HDP/assets/65966247/809b388b-60a0-4fa6-938f-587c86a71620)
 
 ## C Code
+// Right Wall Following Algorithm
 
 ```
 #include <stdio.h>
 
 // Using int instead of bool. 0 = false, 1 = true
-int Sensor1 = 0;
-int Sensor2 = 0;
-int Sensor3 = 0;
+int Sensor1 = 0;    // Left Sensor
+int Sensor2 = 0;    // Right Sensor
+int Sensor3 = 0;    // Front Sensor
 int Speed1 = 1;
 int Speed2 = 1;
-int e1=0;
-int e2=0;
-int d1=0;
-int d2=0;
+int Motor1A=0;
+int Motor1B=0;
+int Motor2A=0;
+int Motor2B=0;
 
 // Prototype function declarations
 void moveForward();
@@ -121,18 +122,16 @@ void readSensors() {
 }
 
 int main() {
-    while (1) { // Infinite loop to keep the robot running
+    while (destination==0) { // keep the robot running until reach the destination
         readSensors(); // Update sensor readings
-
         if (!Sensor2) { // If the path is clear on the right (no obstacle)
             turnRight();
-            moveForward();
+         
         } else if (!Sensor1) { // If the right is blocked but forward is clear (no obstacle)
             moveForward();
         } else if (!Sensor3) { // If both right and forward paths are blocked, turn left (no obstacle)
             turnLeft();
-            moveForward();
-        } else {
+              } else {
             // If all paths are blocked, stop
             stop();
             break; // Exiting the loop, can be removed to keep the robot in a waiting state
