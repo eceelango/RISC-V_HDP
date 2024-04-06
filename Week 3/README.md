@@ -33,7 +33,7 @@
 ![Block Diagram](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6cd1881e-0a56-45c0-b909-3ddc6f1ed812)
 
 ## Flowchart
-![MAZEFLOW](https://github.com/eceelango/RISC-V_HDP/assets/65966247/c6b75dd4-eeee-48d0-bb62-448453a44ced)
+![MAZEFLOW (1)](https://github.com/eceelango/RISC-V_HDP/assets/65966247/43af1c54-7faa-43f4-a7e2-64cdb3f1a5e1)
 
 ## Sensor Functions & Pinout
 Three Sensor Options to implement the project
