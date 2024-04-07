@@ -365,4 +365,8 @@ riscv64-unknown-elf-objdump -d maze_assemblyinline.o | less
 ```
 ![Disassemble](https://github.com/eceelango/RISC-V_HDP/assets/65966247/2875366c-b21a-4193-a505-db790718de5e)
 
-
+## Assembly.txt file generation
+```
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding  -o out maze_assemblyinline.c
+riscv64-unknown-elf-objdump -d  -r out > maze.txt
+```
