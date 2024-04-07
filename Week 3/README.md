@@ -356,3 +356,4 @@ riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o ./maze_assembl
 spike pk maze_assemblyinline.o
 
 ```
+![Assembly inline Simulation](https://github.com/eceelango/RISC-V_HDP/assets/65966247/31fbf679-80b0-4fe3-be4a-75c4d6e0232c)
