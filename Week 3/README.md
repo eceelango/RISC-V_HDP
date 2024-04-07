@@ -180,8 +180,8 @@ void delay(long iterations) {
 ```
 ## Output
 **+ gcc compiler**
-  
-![Screenshot from 2024-03-31 14-47-44](https://github.com/eceelango/RISC-V_HDP/assets/65966247/afe3c44f-229c-416a-8ddd-d7008c5fa456)
+
+  ![Screenshot from 2024-04-07 19-59-42](https://github.com/eceelango/RISC-V_HDP/assets/65966247/f0b39508-44c5-476f-a86c-8eb0f5ea14cd)
 
 **+ RISCV Compiler**
 ```
@@ -189,7 +189,7 @@ riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o ./maze.o maze.
 spike pk maze.o
 
 ```
-![Screenshot from 2024-03-31 14-57-47](https://github.com/eceelango/RISC-V_HDP/assets/65966247/4b8ce8b1-2b02-4e3f-9332-dd3a7592d641)
+![Maze RISCV Compiler](https://github.com/eceelango/RISC-V_HDP/assets/65966247/ef16d4c1-5753-4bd3-836e-e0fd2f257c1b)
 
 
 ## Register architecture of x30 for GPIOs
