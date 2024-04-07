@@ -349,4 +349,10 @@ void delay(long int iterations) {
 
 
 ```
+## Assembly inline Simulation Command
+**+ RISCV Compiler**
+```
+riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o ./maze_assemblyinline.o maze_assemblyinline.c
+spike pk maze_assemblyinline.o
 
+```
