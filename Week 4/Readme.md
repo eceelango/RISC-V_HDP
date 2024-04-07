@@ -21,11 +21,35 @@ void delay(long iterations);
 
 // Function to read sensor values
 
+void readSensors(int *Sensor1, int *Sensor2, int *Sensor3) {
+ // int Sensor1, Sensor2, Sensor3;  // read whether Sensor 1,2 and 3 Obstacle is detected or not
+int mask=0xFFFFFCC8;
+  asm volatile( "and x30, x30, %0\n\t"
+	       "andi %1, x30, 1\n\t"
+               : "=r"(Sensor1)
+               : "r"(mask)
+               : "x30");
+
+  asm volatile( "and x30, x30, %0\n\t" 
+                "srli x30, x30, 1\n\t"
+                "andi %1, x30, 1\n\t"
+               : "=r"(Sensor2)
+               : "r"(mask)
+               : "x30");
+  
+  asm volatile( "and x30, x30, %0\n\t" 
+                "srli x30, x30, 2\n\t"
+                "andi %1, x30, 1\n\t"
+               : "=r"(Sensor3)
+               : "r"(mask)
+               : "x30");
+}
 
 
 int main() {
     while (1) { // keep the robot running infintely
-        readSensors(); // Update sensor readings
+int Sensor1, Sensor2, Sensor3;
+        readSensors(&Sensor1, &Sensor2, &Sensor3); // Update sensor readings
         if (!Sensor3) { // If the path is clear on the right (no obstacle)
             turnRight();
          
@@ -41,59 +65,34 @@ int main() {
     return 0;
 }
 
-int readSensors() {
-  int Sensor1, Sensor2, Sensor3;  // read whether Sensor 1,2 and 3 Obstacle is detected or not
-int mask=0xFFFFFCC8
-  asm volatile( "and x30, x30, %0\n\t"
-	       "andi %1, x30, 1\n\t"
-               : "=r"(Sensor1)
-               : "r"(mask)
-               : "x30");
-  return Sensor1;
-  asm volatile( "and x30, x30, %0\n\t" 
-                "srli x30, x30, 1\n\t"
-                "andi %1, x30, 1\n\t"
-               : "=r"(Sensor2)
-               : "r"(mask)
-               : "x30");
-  return Sensor2;
-  asm volatile( "and x30, x30, %0\n\t" 
-                "srli x30, x30, 2\n\t"
-                "andi %1, x30, 1\n\t"
-               : "=r"(Sensor3)
-               : "r"(mask)
-               : "x30");
-  return Sensor3;
-
-}
-
-
 void moveForward() {
     printf("Moving forward\n");
-int mask =0xFFFFFCC8
+int mask =0xFFFFFCC8;
+ int Motor1A, Motor1B, Motor2A, Motor2B;
 asm volatile(
 		"and x30,x30, %0\n\t"
 		"ori %1,x30, 16\n\t"
                 "ori %2,x30, 0\n\t"
                 "ori %3,x30, 0\n\t"
                 "ori %4,x30, 512\n\t"
-                : "r"(mask),"r"(Motor1A), "r"(Motor1B), "r"(Motor2A), "r"(Motor2B)
                 :
+                : "r"(mask),"r"(Motor1A), "r"(Motor1B), "r"(Motor2A), "r"(Motor2B)
 		: "x30"
 		);
 
-
+}
 void turnRight() {
     printf("Turning right\n");
 
-int mask =0xFFFFFCC8
+int mask =0xFFFFFCC8;
+ int Motor1A, Motor1B, Motor2A, Motor2B;
 asm volatile(
 		"and x30,x30, %0\n\t"
 		"ori %1,x30, 16\n\t"
                 "ori %2,x30, 0\n\t"
                 "ori %3,x30, 256\n\t"
                 "ori %4,x30, 0\n\t"
-
+                :
                 : "r"(mask),"r"(Motor1A), "r"(Motor1B), "r"(Motor2A), "r"(Motor2B)
 		: "x30"
 		);
@@ -103,12 +102,15 @@ asm volatile(
 
 void turnLeft() {
     printf("Turning left\n");
+int mask =0xFFFFFCC8;
+ int Motor1A, Motor1B, Motor2A, Motor2B;
+asm volatile(
 		"and x30,x30, %0\n\t"
 		"ori %1,x30, 0\n\t"
                 "ori %2,x30, 32\n\t"
                 "ori %3,x30, 0\n\t"
                 "ori %4,x30, 512\n\t"
-
+                :
                 : "r"(mask),"r"(Motor1A), "r"(Motor1B), "r"(Motor2A), "r"(Motor2B)
 		: "x30"
 		);
@@ -118,12 +120,15 @@ void turnLeft() {
 
 void goBack() {
     printf("U Turn\n");
+int mask =0xFFFFFCC8;
+ int Motor1A, Motor1B, Motor2A, Motor2B;
+asm volatile(
 		"and x30,x30, %0\n\t"
 		"ori %1,x30, 16\n\t"
                 "ori %2,x30, 0\n\t"
                 "ori %3,x30, 256\n\t"
                 "ori %4,x30, 0\n\t"
-
+                :
                 : "r"(mask),"r"(Motor1A), "r"(Motor1B), "r"(Motor2A), "r"(Motor2B)
 		: "x30"
 		);
@@ -131,7 +136,7 @@ void goBack() {
     delay(1400);
 }
 
-void delay(long intiterations) {
+void delay(long int iterations) {
     for(long i = 0; i < iterations; i++) {
         // Empty loop body
     }
@@ -139,3 +144,11 @@ void delay(long intiterations) {
 
 
 ```
+## Assembly inline Simulation Command
+**+ RISCV Compiler**
+```
+riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o ./maze_assemblyinline.o maze_assemblyinline.c
+spike pk maze_assemblyinline.o
+
+```
+![Assembly inline Simulation](https://github.com/eceelango/RISC-V_HDP/assets/65966247/31fbf679-80b0-4fe3-be4a-75c4d6e0232c)
