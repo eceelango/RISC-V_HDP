@@ -152,3 +152,17 @@ spike pk maze_assemblyinline.o
 
 ```
 ![Assembly inline Simulation](https://github.com/eceelango/RISC-V_HDP/assets/65966247/31fbf679-80b0-4fe3-be4a-75c4d6e0232c)
+
+## Assembly Code generation
+Make sure comment printf, library and scan f statement in the c code
+```
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o maze_assemblyinline.o maze_assemblyinline.c
+riscv64-unknown-elf-objdump -d maze_assemblyinline.o | less
+```
+![Disassemble](https://github.com/eceelango/RISC-V_HDP/assets/65966247/2875366c-b21a-4193-a505-db790718de5e)
+
+## Assembly.txt file generation
+```
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding  -o out maze_assemblyinline.c
+riscv64-unknown-elf-objdump -d  -r out > maze.txt
+```
