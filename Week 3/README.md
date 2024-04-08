@@ -360,7 +360,7 @@ spike pk maze_assemblyinline.o
 
 ## Assembly Code generation
 **
-Make Sure Comment all the lib, printf and Scanf functions. Code should statrs with int main ()**
+Make Sure Comment all the lib, printf and Scanf functions. Code should starts with int main ()**
 
 ```
 //#include <stdio.h>
