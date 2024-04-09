@@ -105,5 +105,10 @@ bnez = bne
 }
 
 ```
+### Uploading .json and .txt file
+Upload All.json and Upload assembly.txt in the following web address, Verilog file for the Microarchitecture (RISC V) and its corresponding testbench code will be generated as .zip
 
+http://16.16.202.21/
+
+![Screenshot from 2024-04-09 22-45-20](https://github.com/eceelango/RISC-V_HDP/assets/65966247/5ca83750-cad3-4a13-9a46-b47b9b5c70f4)
 
