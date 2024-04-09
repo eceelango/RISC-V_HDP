@@ -9,3 +9,5 @@
 + Designing SoC using ChipCron Tool
 + Understanding and designing testbench
 + Verification via simulation
++ Embedded Project
++ **Course ends on 14.04.2024**
