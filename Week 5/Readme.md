@@ -137,3 +137,13 @@ http://16.16.202.21/
     Motor2A= top_gpio_pins[8]; 
     Motor2B= top_gpio_pins[9];
 ```
+### Do the necessary changes in the Testbench file    
+## iverilog Simulation
+
+```
+iverilog -o maze_v testbench.v processor.v
+vvp maze_v
+or
+./maze_v
+```
+It will generate the VCD file in the folder. Click the fiel GTK wave window will open and drag and drop the signal you may see the output
