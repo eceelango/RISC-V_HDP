@@ -695,3 +695,26 @@ Disassembly of section .text:
    102dc:	00008067          	ret
 
 ```
+## Unique Instruction
+I have run the python scripts in terminal to get the unique instruction (Reference:https://github.com/BhattSoham/RISCV-HDP/blob/main/week3/script.py). Note the .txt should on the same the folder where youa re running the script
++ python script.py (if its not supported use the below command)
++ python3 script.py
++ Number of different instructions:**15**
++ List of unique instructions:
+```
+addi
+nop
+ori
+lw
+bnez
+srli
+jal
+j
+mv
+sw
+li
+andi
+and
+ret
+blt
+```
