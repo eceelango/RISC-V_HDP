@@ -113,8 +113,20 @@ http://16.16.202.21/
 ![Screenshot from 2024-04-09 22-45-20](https://github.com/eceelango/RISC-V_HDP/assets/65966247/5ca83750-cad3-4a13-9a46-b47b9b5c70f4)
 
 ## GPIO Configuration
+### Register architecture of x30 for GPIOs
+
++ Input Signals - Sensor1, Sensor2, Sensor3;
++ Output Signals -  Motor1A, Motor1B, Motor2A, Motor2B;
++ Number of Register bits Required - 7
++ Register bits allocations are given below
+
++ x30 [2:0] is Sensor -  Sensor 1 - x30[0]; Sensor 2 - x30[1]; Sensor 3 - x30[2];   // Input - Read
++ x30 [5:4] is e1 & e2 - e1 x30 [4] ; e2 x30 [5] ;  // Output Write
++ x30 [9:8] is d1 & d2 - d1 x30 [8] ; d2 x30 [9] ;  // Output Write
+
+ #### GPIO Configuration in Verilog File
 ```
-module wrapper(clk,resetn,uart_rxd,uart_rx_en,uart_rx_break,uart_rx_valid,uart_rx_data, Motor1A,Motor1B,Motor2A,Motor2B, Sensors, write_done, instructions);
+    module wrapper(clk,resetn,uart_rxd,uart_rx_en,uart_rx_break,uart_rx_valid,uart_rx_data, Motor1A,Motor1B,Motor2A,Motor2B, Sensors, write_done, instructions);
     input wire [3:1] Sensors;
     output reg Motor1A,Motor1B,Motor2A,Motor2B;
 
