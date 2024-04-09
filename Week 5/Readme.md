@@ -1,4 +1,4 @@
-# Creating Custom RISC-V Processor for Controlling the Maze
+# Creating Custom RISC-V Processor for Autonomous Navigation System
 ## Unique Instruction
 I have run the python scripts in terminal to get the unique instruction (Reference:https://github.com/BhattSoham/RISCV-HDP/blob/main/week3/script.py). Note the .txt should on the same the folder where youa re running the script
 + python script.py (if its not supported use the below command)
