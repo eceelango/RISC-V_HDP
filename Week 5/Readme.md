@@ -112,3 +112,16 @@ http://16.16.202.21/
 
 ![Screenshot from 2024-04-09 22-45-20](https://github.com/eceelango/RISC-V_HDP/assets/65966247/5ca83750-cad3-4a13-9a46-b47b9b5c70f4)
 
+## GPIO Configuration
+```
+module wrapper(clk,resetn,uart_rxd,uart_rx_en,uart_rx_break,uart_rx_valid,uart_rx_data, Motor1A,Motor1B,Motor2A,Motor2B, Sensors, write_done, instructions);
+    input wire [3:1] Sensors;
+    output reg Motor1A,Motor1B,Motor2A,Motor2B;
+
+
+    output_pins = {22'b0,top_gpio_pins[9:8], 2'b0,top_gpio_pins[5:4],1'b0,Sensors} ; 
+    Motor1A= top_gpio_pins[4]; 
+    Motor1B= top_gpio_pins[5]; 
+    Motor2A= top_gpio_pins[8]; 
+    Motor2B= top_gpio_pins[9];
+```
