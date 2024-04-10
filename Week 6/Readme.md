@@ -10,3 +10,8 @@ vvp maze1_v
 or
 ./maze1_v
 ```
+![VCD_Uartbyepass](https://github.com/eceelango/RISC-V_HDP/assets/65966247/27d7249f-79ed-4399-9ee3-69ab2fa84f7e)
+
++ Click on generated VCD file GTKwave will open and select the DUT and corresponding Signals to view the output
+
+  ![GTKwave](https://github.com/eceelango/RISC-V_HDP/assets/65966247/3a3871f9-51a4-4e78-916c-096ea77a78ff)
