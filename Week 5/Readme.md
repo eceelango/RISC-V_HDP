@@ -137,7 +137,9 @@ http://16.16.202.21/
     Motor2A= top_gpio_pins[8]; 
     Motor2B= top_gpio_pins[9];
 ```
-### Do the necessary changes in the Testbench file    
+### Do the necessary changes in the Testbench file. 
+I have given 8 possible input sensor combination.    
+
 ## iverilog Simulation
 
 ```
@@ -146,4 +148,6 @@ vvp maze_v
 or
 ./maze_v
 ```
-It will generate the VCD file in the folder. Click the fiel GTK wave window will open and drag and drop the signal you may see the output
+![UART Verification and VCD File generation](https://github.com/eceelango/RISC-V_HDP/assets/65966247/a96bd709-9168-4845-bbce-5593b4c728ae)
+
+It will generate the VCD file (30.6 GB) in the folder. Click the file GTK wave window will open and drag and drop the signal you may see the output
