@@ -68,3 +68,10 @@ dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 write_verilog synth_gpio.v
 show wrapper
 ```
+**synth -top wrapper
+**
+![Synth](https://github.com/eceelango/RISC-V_HDP/assets/65966247/e0b4f093-d085-4fa0-85a6-9db41646b0b3)
+
+Mapping yosys standard cell to sky130 lib logic cells
+![abc](https://github.com/eceelango/RISC-V_HDP/assets/65966247/6bdc5586-f62f-4ac8-b1a7-d76f55876ebe)
+
