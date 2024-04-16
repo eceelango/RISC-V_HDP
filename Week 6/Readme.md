@@ -40,6 +40,7 @@ git fetch --unshallow
 make -j$(nproc)
 sudo make install
 ```
+![Yosys Installation](https://github.com/eceelango/RISC-V_HDP/assets/65966247/83e44e0d-ed86-445c-b56b-4aae830ac165)
 
 To invoke the yosys tool
 
@@ -60,7 +61,7 @@ yosys
 
 ```
 read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
-read_verilog gpio_syn.v
+read_verilog processor.v
 synth -top wrapper
 abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
