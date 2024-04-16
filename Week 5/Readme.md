@@ -35,6 +35,7 @@ bnez = bne
 ### RISC V Custom Core Configuration (.json)
 ```
 {
+    {
     "ALU_dist": 3,
     "pc_bit_width":8,
     "value_bit_width":32,
@@ -43,10 +44,10 @@ bnez = bne
     "address_size":5,
     "shamt":5,
     "instructions":{
-        "LUI"   :false, 
+        "LUI"   :true, 
         "AUIPC" :false,
         "JAL"   :true,  
-        "JALR"  :false,
+        "JALR"  :true,
         "BEQ"   :false,
         "BNE"   :true,
         "BLT"   :true,
@@ -78,7 +79,7 @@ bnez = bne
         "XOR"   :false,
         "SRL"   :false,
         "SRA"   :false,
-        "OR"    :false,
+        "OR"    :true,
         "AND"   :true,
         "MUL"   :false,
         "MULH"  :false,
