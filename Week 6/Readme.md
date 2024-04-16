@@ -20,7 +20,7 @@ or
 Yosys tool is used to convert the behavioural code to gate level netlist. Here we are going to use SKY130 PDK.
 Comment the module definitions of both **sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst.**
 All required sky130 libs are kept in the current working directory, and proper instantiation name is used for SRAM from sky130 libs
-If you want your nelist for FPGA platform make **writing_inst_done=0** in verilog file. Incase of ASIC, **writing_inst_done=1**
+If you want your nelist for FPGA platform make **writing_inst_done=1** in verilog file. Incase of ASIC, **writing_inst_done=0**
  
  ### Yosys Tool Installation
 
