@@ -1,0 +1,182 @@
+
+out:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	ff010113          	addi	sp,sp,-16
+   10078:	00112623          	sw	ra,12(sp)
+   1007c:	00812423          	sw	s0,8(sp)
+   10080:	01010413          	addi	s0,sp,16
+   10084:	000117b7          	lui	a5,0x11
+   10088:	3007a783          	lw	a5,768(a5) # 11300 <__DATA_BEGIN__>
+   1008c:	0807c263          	bltz	a5,10110 <main+0x9c>
+   10090:	000117b7          	lui	a5,0x11
+   10094:	3007a703          	lw	a4,768(a5) # 11300 <__DATA_BEGIN__>
+   10098:	00100793          	li	a5,1
+   1009c:	06e7ca63          	blt	a5,a4,10110 <main+0x9c>
+   100a0:	000117b7          	lui	a5,0x11
+   100a4:	3047a783          	lw	a5,772(a5) # 11304 <Sensor2>
+   100a8:	0607c463          	bltz	a5,10110 <main+0x9c>
+   100ac:	000117b7          	lui	a5,0x11
+   100b0:	3047a703          	lw	a4,772(a5) # 11304 <Sensor2>
+   100b4:	00100793          	li	a5,1
+   100b8:	04e7cc63          	blt	a5,a4,10110 <main+0x9c>
+   100bc:	8081a783          	lw	a5,-2040(gp) # 11308 <Sensor3>
+   100c0:	0407c863          	bltz	a5,10110 <main+0x9c>
+   100c4:	8081a703          	lw	a4,-2040(gp) # 11308 <Sensor3>
+   100c8:	00100793          	li	a5,1
+   100cc:	04e7c263          	blt	a5,a4,10110 <main+0x9c>
+   100d0:	8081a783          	lw	a5,-2040(gp) # 11308 <Sensor3>
+   100d4:	00079663          	bnez	a5,100e0 <main+0x6c>
+   100d8:	0f0000ef          	jal	ra,101c8 <turnRight>
+   100dc:	fa9ff06f          	j	10084 <main+0x10>
+   100e0:	000117b7          	lui	a5,0x11
+   100e4:	3047a783          	lw	a5,772(a5) # 11304 <Sensor2>
+   100e8:	00079663          	bnez	a5,100f4 <main+0x80>
+   100ec:	088000ef          	jal	ra,10174 <moveForward>
+   100f0:	f95ff06f          	j	10084 <main+0x10>
+   100f4:	000117b7          	lui	a5,0x11
+   100f8:	3007a783          	lw	a5,768(a5) # 11300 <__DATA_BEGIN__>
+   100fc:	00079663          	bnez	a5,10108 <main+0x94>
+   10100:	11c000ef          	jal	ra,1021c <turnLeft>
+   10104:	f81ff06f          	j	10084 <main+0x10>
+   10108:	164000ef          	jal	ra,1026c <goBack>
+   1010c:	f79ff06f          	j	10084 <main+0x10>
+   10110:	00000013          	nop
+   10114:	f71ff06f          	j	10084 <main+0x10>
+
+00010118 <readSensors>:
+   10118:	fe010113          	addi	sp,sp,-32
+   1011c:	00812e23          	sw	s0,28(sp)
+   10120:	02010413          	addi	s0,sp,32
+   10124:	fea42623          	sw	a0,-20(s0)
+   10128:	feb42423          	sw	a1,-24(s0)
+   1012c:	fec42223          	sw	a2,-28(s0)
+   10130:	cc800f13          	li	t5,-824
+   10134:	000f5613          	srli	a2,t5,0x0
+   10138:	00167613          	andi	a2,a2,1
+   1013c:	001f5f13          	srli	t5,t5,0x1
+   10140:	001f7693          	andi	a3,t5,1
+   10144:	001f5f13          	srli	t5,t5,0x1
+   10148:	001f7713          	andi	a4,t5,1
+   1014c:	fec42783          	lw	a5,-20(s0)
+   10150:	00c7a023          	sw	a2,0(a5)
+   10154:	fe842783          	lw	a5,-24(s0)
+   10158:	00d7a023          	sw	a3,0(a5)
+   1015c:	fe442783          	lw	a5,-28(s0)
+   10160:	00e7a023          	sw	a4,0(a5)
+   10164:	00000013          	nop
+   10168:	01c12403          	lw	s0,28(sp)
+   1016c:	02010113          	addi	sp,sp,32
+   10170:	00008067          	ret
+
+00010174 <moveForward>:
+   10174:	ff010113          	addi	sp,sp,-16
+   10178:	00112623          	sw	ra,12(sp)
+   1017c:	00812423          	sw	s0,8(sp)
+   10180:	01010413          	addi	s0,sp,16
+   10184:	cc800f13          	li	t5,-824
+   10188:	01e075b3          	and	a1,zero,t5
+   1018c:	0105e593          	ori	a1,a1,16
+   10190:	00000613          	li	a2,0
+   10194:	00000693          	li	a3,0
+   10198:	200f6713          	ori	a4,t5,512
+   1019c:	80b1a623          	sw	a1,-2036(gp) # 1130c <Motor1A>
+   101a0:	80c1a823          	sw	a2,-2032(gp) # 11310 <Motor1B>
+   101a4:	80d1aa23          	sw	a3,-2028(gp) # 11314 <Motor2A>
+   101a8:	80e1ac23          	sw	a4,-2024(gp) # 11318 <Motor2B>
+   101ac:	57800513          	li	a0,1400
+   101b0:	110000ef          	jal	ra,102c0 <delay>
+   101b4:	00000013          	nop
+   101b8:	00c12083          	lw	ra,12(sp)
+   101bc:	00812403          	lw	s0,8(sp)
+   101c0:	01010113          	addi	sp,sp,16
+   101c4:	00008067          	ret
+
+000101c8 <turnRight>:
+   101c8:	ff010113          	addi	sp,sp,-16
+   101cc:	00112623          	sw	ra,12(sp)
+   101d0:	00812423          	sw	s0,8(sp)
+   101d4:	01010413          	addi	s0,sp,16
+   101d8:	cc800f13          	li	t5,-824
+   101dc:	01e075b3          	and	a1,zero,t5
+   101e0:	0105e593          	ori	a1,a1,16
+   101e4:	00000613          	li	a2,0
+   101e8:	100f6693          	ori	a3,t5,256
+   101ec:	00000713          	li	a4,0
+   101f0:	80b1a623          	sw	a1,-2036(gp) # 1130c <Motor1A>
+   101f4:	80c1a823          	sw	a2,-2032(gp) # 11310 <Motor1B>
+   101f8:	80d1aa23          	sw	a3,-2028(gp) # 11314 <Motor2A>
+   101fc:	80e1ac23          	sw	a4,-2024(gp) # 11318 <Motor2B>
+   10200:	2bc00513          	li	a0,700
+   10204:	0bc000ef          	jal	ra,102c0 <delay>
+   10208:	00000013          	nop
+   1020c:	00c12083          	lw	ra,12(sp)
+   10210:	00812403          	lw	s0,8(sp)
+   10214:	01010113          	addi	sp,sp,16
+   10218:	00008067          	ret
+
+0001021c <turnLeft>:
+   1021c:	ff010113          	addi	sp,sp,-16
+   10220:	00112623          	sw	ra,12(sp)
+   10224:	00812423          	sw	s0,8(sp)
+   10228:	01010413          	addi	s0,sp,16
+   1022c:	cc800f13          	li	t5,-824
+   10230:	00000593          	li	a1,0
+   10234:	020f6613          	ori	a2,t5,32
+   10238:	00000693          	li	a3,0
+   1023c:	200f6713          	ori	a4,t5,512
+   10240:	80b1a623          	sw	a1,-2036(gp) # 1130c <Motor1A>
+   10244:	80c1a823          	sw	a2,-2032(gp) # 11310 <Motor1B>
+   10248:	80d1aa23          	sw	a3,-2028(gp) # 11314 <Motor2A>
+   1024c:	80e1ac23          	sw	a4,-2024(gp) # 11318 <Motor2B>
+   10250:	2bc00513          	li	a0,700
+   10254:	06c000ef          	jal	ra,102c0 <delay>
+   10258:	00000013          	nop
+   1025c:	00c12083          	lw	ra,12(sp)
+   10260:	00812403          	lw	s0,8(sp)
+   10264:	01010113          	addi	sp,sp,16
+   10268:	00008067          	ret
+
+0001026c <goBack>:
+   1026c:	ff010113          	addi	sp,sp,-16
+   10270:	00112623          	sw	ra,12(sp)
+   10274:	00812423          	sw	s0,8(sp)
+   10278:	01010413          	addi	s0,sp,16
+   1027c:	cc800f13          	li	t5,-824
+   10280:	01e075b3          	and	a1,zero,t5
+   10284:	0105e593          	ori	a1,a1,16
+   10288:	00000613          	li	a2,0
+   1028c:	100f6693          	ori	a3,t5,256
+   10290:	00000713          	li	a4,0
+   10294:	80b1a623          	sw	a1,-2036(gp) # 1130c <Motor1A>
+   10298:	80c1a823          	sw	a2,-2032(gp) # 11310 <Motor1B>
+   1029c:	80d1aa23          	sw	a3,-2028(gp) # 11314 <Motor2A>
+   102a0:	80e1ac23          	sw	a4,-2024(gp) # 11318 <Motor2B>
+   102a4:	57800513          	li	a0,1400
+   102a8:	018000ef          	jal	ra,102c0 <delay>
+   102ac:	00000013          	nop
+   102b0:	00c12083          	lw	ra,12(sp)
+   102b4:	00812403          	lw	s0,8(sp)
+   102b8:	01010113          	addi	sp,sp,16
+   102bc:	00008067          	ret
+
+000102c0 <delay>:
+   102c0:	fd010113          	addi	sp,sp,-48
+   102c4:	02812623          	sw	s0,44(sp)
+   102c8:	03010413          	addi	s0,sp,48
+   102cc:	fca42e23          	sw	a0,-36(s0)
+   102d0:	fe042623          	sw	zero,-20(s0)
+   102d4:	0100006f          	j	102e4 <delay+0x24>
+   102d8:	fec42783          	lw	a5,-20(s0)
+   102dc:	00178793          	addi	a5,a5,1
+   102e0:	fef42623          	sw	a5,-20(s0)
+   102e4:	fec42703          	lw	a4,-20(s0)
+   102e8:	fdc42783          	lw	a5,-36(s0)
+   102ec:	fef746e3          	blt	a4,a5,102d8 <delay+0x18>
+   102f0:	00000013          	nop
+   102f4:	02c12403          	lw	s0,44(sp)
+   102f8:	03010113          	addi	sp,sp,48
+   102fc:	00008067          	ret
