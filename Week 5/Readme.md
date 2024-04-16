@@ -3,24 +3,26 @@
 I have run the python scripts in terminal to get the unique instruction (Reference:https://github.com/BhattSoham/RISCV-HDP/blob/main/week3/script.py). Note the .txt should on the same the folder where youa re running the script
 + python script.py (if its not supported use the below command)
 + python3 script.py
-+ Number of different instructions:**15**
++ Number of different instructions:**16**
 + List of unique instructions:
 ```
-addi
-nop
-ori
-lw
-bnez
 srli
-jal
+ori
 j
-mv
-sw
-li
 andi
-and
-ret
+lw
+lui
+addi
+li
 blt
+jal
+nop
+bnez
+sw
+ret
+bltz
+and
+
 ```
 ### Pesudo Instruction Equivalent Command
 ```
