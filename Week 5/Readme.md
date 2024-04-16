@@ -3,25 +3,26 @@
 I have run the python scripts in terminal to get the unique instruction (Reference:https://github.com/BhattSoham/RISCV-HDP/blob/main/week3/script.py). Note the .txt should on the same the folder where youa re running the script
 + python script.py (if its not supported use the below command)
 + python3 script.py
-+ Number of different instructions:**16**
++ Number of different instructions:**17**
 + List of unique instructions:
 ```
-srli
-ori
 j
-andi
-lw
-lui
-addi
 li
-blt
-jal
-nop
-bnez
-sw
+or
 ret
+ori
+lw
+jal
+addi
+nop
+srli
+andi
+bnez
+lui
 bltz
 and
+sw
+blt
 
 ```
 ### Pesudo Instruction Equivalent Command
@@ -36,6 +37,7 @@ bnez = bne
 ```
 {
     {
+   {
     "ALU_dist": 3,
     "pc_bit_width":8,
     "value_bit_width":32,
@@ -47,7 +49,7 @@ bnez = bne
         "LUI"   :true, 
         "AUIPC" :false,
         "JAL"   :true,  
-        "JALR"  :true,
+        "JALR"  :false,
         "BEQ"   :false,
         "BNE"   :true,
         "BLT"   :true,
