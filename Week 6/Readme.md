@@ -62,7 +62,7 @@ yosys
 
 ```
 read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
-read_verilog processor.v
+read_verilog processor1.v
 synth -top wrapper
 abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
@@ -84,7 +84,7 @@ show wrapper
 Close yosys & Open the terminal which contains all the relavant file
 
 ```
-iverilog -o output_gls testbench.v synth_processor.v sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v
+iverilog -o output_gls testbench1.v synth_processor.v sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v
 vvp output_gls
 ```
 Click the waveform.vcd to open the GTKwave Simulation
