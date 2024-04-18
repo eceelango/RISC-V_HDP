@@ -85,6 +85,8 @@ Close yosys & Open the terminal which contains all the relavant file
 
 ```
 iverilog -o output_gls testbench.v synth_processor.v sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v
-
+vvp output_gls
 ```
+Click the waveform.vcd to open the GTKwave Simulation
+
 ![GatelevelSimulation](https://github.com/eceelango/RISC-V_HDP/assets/65966247/d6ec754e-492e-41a6-a6cc-27d97dec520b)
