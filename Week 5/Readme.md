@@ -6,23 +6,24 @@ I have run the python scripts in terminal to get the unique instruction (Referen
 + Number of different instructions:**17**
 + List of unique instructions:
 ```
-j
-li
+nop
+sw
+addi
 or
-ret
-ori
 lw
 jal
-addi
-nop
-srli
-andi
 bnez
-lui
-bltz
+j
 and
-sw
+ret
 blt
+srli
+bltz
+lui
+andi
+ori
+li
+
 
 ```
 ### Pesudo Instruction Equivalent Command
